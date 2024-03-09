@@ -7,7 +7,7 @@
     "dev": "pnpm --parallel --filter './packages/**' dev",
     "build": "pnpm --parallel --filter './packages/**' build",
     "format": "pnpm --parallel --filter './packages/**' format",
-    "prepare": "pnpm exec husky init",
+    "prepare": "husky",
     "precommit": "lint-staged"
   },
   "keywords": [],
@@ -20,12 +20,11 @@
     "husky": "^9.0.11",
     "prettier": "^3.2.5",
     "typescript": "^5.4.2",
-    "typescript-eslint": "^7.1.1"
-  },
-  "dependencies": {
+    "typescript-eslint": "^7.1.1",
     "@types/node": "^20.11.25",
     "lint-staged": "^15.2.2"
   },
+  "dependencies": {},
   "lint-staged": {
     "*.{ts,js}": [
       "eslint --fix",
