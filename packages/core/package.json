@@ -1,0 +1,18 @@
+{
+  "name": "core",
+  "version": "0.0.1",
+  "description": "poker base",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "rollup -c",
+    "format": "pnpm exec prettier . --write"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^11.1.6",
+    "rollup": "^4.12.1"
+  }
+}
