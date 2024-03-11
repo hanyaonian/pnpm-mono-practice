@@ -5,6 +5,7 @@
   "description": "Poker rules in TypeScript",
   "scripts": {
     "dev": "pnpm --parallel --filter './packages/**' dev",
+    "test": "pnpm --parallel --filter './packages/**' test",
     "build": "pnpm --parallel --filter './packages/**' build",
     "format": "pnpm --parallel --filter './packages/**' format",
     "prepare": "husky",
@@ -16,15 +17,15 @@
   "devDependencies": {
     "@commitlint/cli": "^19.0.3",
     "@commitlint/config-conventional": "^19.0.3",
+    "@types/node": "^20.11.25",
     "eslint": "^8.57.0",
+    "eslint-plugin-jest": "^27.9.0",
     "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",
     "typescript": "^5.4.2",
-    "typescript-eslint": "^7.1.1",
-    "@types/node": "^20.11.25",
-    "lint-staged": "^15.2.2"
+    "typescript-eslint": "^7.1.1"
   },
-  "dependencies": {},
   "lint-staged": {
     "*.{ts,js}": [
       "eslint --fix",

@@ -4,5 +4,5 @@
     "declaration": true,
     "module": "ESNext"
   },
-  "include": ["./src/*.ts"]
+  "include": ["./src/*.ts", "tests/*.ts"]
 }

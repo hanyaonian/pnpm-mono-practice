@@ -11,16 +11,17 @@ export enum CardFace {
   Ten = '10',
   Jack = 'J',
   Queen = 'Q',
-  King = 'K',
-
-  // CN
-  Joker = 'Joker',
-  White = 'White',
+  King = 'K'
 }
 
-export enum CommonCardSuit {
+export enum CardSuit {
   Heart = 'Heart',
   Spade = 'Spade',
   Diamond = 'Diamond',
-  Club = 'Club',
+  Club = 'Club'
+}
+
+export interface Card {
+  suit: CardSuit;
+  face: CardFace;
 }
