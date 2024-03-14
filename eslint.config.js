@@ -1,4 +1,5 @@
 // @ts-check
+// @see https://kulshekhar.github.io/ts-jest/
 // @see https://typescript-eslint.io/getting-started/typed-linting/monorepos
 // @see https://typescript-eslint.io/packages/typescript-eslint/#usage-with-other-plugins
 import eslint from '@eslint/js';
@@ -11,6 +12,7 @@ export default tseslint.config(
     ignores: ['**/build/**', '**/dist/**', 'src/some/file/to/ignore.ts']
   },
   eslint.configs.recommended,
+  ...tseslint.configs.recommendedTypeChecked,
   {
     plugins: {
       '@typescript-eslint': tseslint.plugin,
@@ -53,7 +55,7 @@ export default tseslint.config(
   },
   {
     // enable jest rules on test files
-    files: ['test/**'],
+    files: ['tests/*.ts'],
     ...jestPlugin.configs['flat/recommended']
   }
 );
